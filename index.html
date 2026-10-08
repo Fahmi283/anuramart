@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANURA MART — Toko Retail Mandiri & Agen BRILink Terpercaya</title>
+  <meta name="description" content="ANURA MART: Belanja kebutuhan harian lengkap & hemat, melayani transaksi Agen BRILink, tarik setor tunai, transfer antar bank, dan top up e-wallet cepat tanpa antre.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #047857;
+      --primary-hover: #065f46;
+      --primary-light: #ecfdf5;
+      --primary-border: #a7f3d0;
+      --accent: #0284c7;
+      --accent-light: #f0f9ff;
+      --warning: #d97706;
+      --warning-light: #fef3c7;
+      --dark: #0f172a;
+      --dark-muted: #334155;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --white: #ffffff;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.03);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: var(--dark);
+      background-color: var(--gray-50);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header Bar */
+    .top-announcement {
+      background: linear-gradient(90deg, #064e3b 0%, #065f46 100%);
+      color: #d1fae5;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 9px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .top-announcement span.badge {
+      background: #10b981;
+      color: #064e3b;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--gray-200);
+      transition: all 0.2s ease;
+    }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 74px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary) 0%, #059669 100%);
+      color: var(--white);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+      box-shadow: 0 4px 10px rgba(4, 120, 87, 0.3);
+    }
+    .brand-text h1 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--dark);
+      line-height: 1.1;
+    }
+    .brand-text p {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-muted);
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(4, 120, 87, 0.25);
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(4, 120, 87, 0.35);
+    }
+    .btn-outline {
+      background-color: transparent;
+      border: 1.5px solid var(--gray-300);
+      color: var(--dark);
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 60px 0 80px;
+      background: radial-gradient(circle at 80% 20%, #d1fae5 0%, #f8fafc 45%, #ecfdf5 100%);
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: var(--white);
+      border: 1px solid var(--primary-border);
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+    }
+    .hero-title {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      color: var(--dark);
+      margin-bottom: 18px;
+    }
+    .hero-title span.highlight-green {
+      color: var(--primary);
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      color: var(--gray-600);
+      margin-bottom: 32px;
+      max-width: 540px;
+      line-height: 1.6;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .stat-item h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+    }
+    .stat-item p {
+      font-size: 13px;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+
+    /* Hero Card / Feature Box */
+    .hero-interactive-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      position: relative;
+    }
+    .service-switch-tab {
+      display: flex;
+      background: var(--gray-100);
+      padding: 4px;
+      border-radius: var(--radius-full);
+      margin-bottom: 24px;
+      gap: 4px;
+    }
+    .switch-btn {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: transparent;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .switch-btn.active {
+      background: var(--white);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Calculator Widget inside Hero */
+    .calc-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .input-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark-muted);
+      margin-bottom: 6px;
+    }
+    .input-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--dark);
+      outline: none;
+      transition: border-color 0.2s ease;
+      background: var(--gray-50);
+    }
+    .input-control:focus {
+      border-color: var(--primary);
+      background: var(--white);
+    }
+    .calc-result-box {
+      background: var(--primary-light);
+      border: 1px dashed var(--primary);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .calc-result-box .label {
+      font-size: 12px;
+      color: var(--primary-hover);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .calc-result-box .value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-hover);
+      letter-spacing: -0.5px;
+    }
+
+    /* Services Section */
+    .section {
+      padding: 80px 0;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--dark);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--gray-600);
+    }
+
+    /* Service Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .service-main-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-main-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    .service-main-card.retail {
+      border-top: 5px solid var(--primary);
+    }
+    .service-main-card.fintech {
+      border-top: 5px solid var(--accent);
+    }
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .card-icon.retail {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+    .card-icon.fintech {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+    .service-main-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+    .service-main-card p.desc {
+      font-size: 15px;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--dark-muted);
+    }
+    .feature-list li svg {
+      flex-shrink: 0;
+    }
+
+    /* Promo Catalog Section */
+    .catalog-section {
+      background: #f1f5f9;
+      padding: 80px 0;
+    }
+    .catalog-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .tab-pill {
+      padding: 9px 20px;
+      border-radius: var(--radius-full);
+      background: var(--white);
+      color: var(--gray-600);
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid var(--gray-300);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .tab-pill.active, .tab-pill:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    .product-thumb {
+      height: 150px;
+      background: var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      position: relative;
+    }
+    .discount-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #ef4444;
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+    }
+    .product-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-category {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .product-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .price-group {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .real-price {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .strike-price {
+      font-size: 12px;
+      color: var(--gray-600);
+      text-decoration: line-through;
+    }
+
+    /* Benefits Section */
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      border: 1px solid var(--gray-200);
+    }
+    .why-card .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    .why-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+    .why-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* WhatsApp Order Banner */
+    .delivery-banner {
+      background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 36px;
+      margin-top: 40px;
+      box-shadow: 0 12px 30px rgba(4, 120, 87, 0.25);
+    }
+    .delivery-banner h3 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .delivery-banner p {
+      font-size: 16px;
+      color: #a7f3d0;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .delivery-card-cta {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      color: var(--dark);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    .delivery-card-cta h5 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .delivery-card-cta p {
+      font-size: 13px;
+      color: var(--gray-600);
+      margin-bottom: 16px;
+    }
+
+    /* Location & Operational Hours */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-md);
+    }
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .info-item {
+      display: flex;
+      gap: 16px;
+    }
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      color: var(--primary);
+    }
+    .info-content h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .info-content p {
+      font-size: 14px;
+      color: var(--gray-600);
+    }
+    .map-preview-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #e2e8f0;
+      height: 100%;
+      min-height: 280px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid var(--gray-300);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 60px 0 30px;
+      font-size: 14px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand h4 {
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .footer-brand p {
+      line-height: 1.6;
+      max-width: 380px;
+    }
+    .footer-links h5 {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .footer-links a:hover {
+      color: var(--white);
+    }
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    /* Sticky Mobile Action Bar */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      padding: 12px 20px;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+      z-index: 99;
+      border-top: 1px solid var(--gray-200);
+      gap: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .why-us-grid {
+        grid-template-columns: 1fr;
+      }
+      .delivery-banner {
+        grid-template-columns: 1fr;
+        padding: 32px;
+      }
+      .location-grid {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .mobile-bar {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <div class="top-announcement">
+    <span class="badge">RESMI & TERPERCAYA</span>
+    <span>🏪 ANURA MART — Belanja Lengkap, Layanan Agen BRILink & Top Up Buka Setiap Hari: 06.00 – 22.00 WIB!</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <div class="brand-logo">A</div>
+        <div class="brand-text">
+          <h1>ANURA MART</h1>
+          <p>Retail & Layanan Keuangan</p>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#brilink">Agen BRILink</a></li>
+        <li><a href="#katalog">Katalog Promo</a></li>
+        <li><a href="#simulasi">Simulasi Biaya</a></li>
+        <li><a href="#lokasi">Lokasi & Jam Buka</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20saya%20mau%20tanya%20layanan" target="_blank" class="btn btn-primary">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.679.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+          Chat WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span>Buka Setiap Hari: 06.00 – 22.00 WIB</span>
+        </div>
+        <h2 class="hero-title">
+          Belanja Hemat, <span class="highlight-green">Transaksi Cepat</span> Tanpa Antre di ANURA MART
+        </h2>
+        <p class="hero-subtitle">
+          Minimarket mandiri modern penyedia sembako dan kebutuhan harian lengkap, plus gerai transaksi perbankan <strong>Agen BRILink Resmi</strong>, tarik/setor tunai, dan top up e-wallet terlengkap di dekat Anda.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#brilink" class="btn btn-primary" style="padding: 13px 28px; font-size: 15px;">
+            Layanan BRILink & Top Up
+          </a>
+          <a href="#katalog" class="btn btn-outline" style="padding: 13px 28px; font-size: 15px;">
+            Lihat Promo Toko
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>1.500+</h3>
+            <p>Produk Retail Siap</p>
+          </div>
+          <div class="stat-item">
+            <h3>140+</h3>
+            <p>Bank Terlayani Cepat</p>
+          </div>
+          <div class="stat-item">
+            <h3>0 Menit</h3>
+            <p>Tanpa Antrean Panjang</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Calculator / Switcher Card -->
+      <div class="hero-interactive-card" id="simulasi">
+        <div class="service-switch-tab">
+          <button class="switch-btn active" id="tab-btn-brilink" onclick="switchCalc('brilink')">
+            💳 Transaksi BRILink
+          </button>
+          <button class="switch-btn" id="tab-btn-topup" onclick="switchCalc('topup')">
+            📱 Top Up E-Wallet
+          </button>
+        </div>
+
+        <div class="calc-box" id="calc-content">
+          <div class="input-group">
+            <label id="calc-select-label">Jenis Layanan</label>
+            <select class="input-control" id="calc-service" onchange="calculateFee()">
+              <option value="transfer_bri">Transfer Sesama Bank BRI</option>
+              <option value="transfer_lain">Transfer ke Bank Lain (BCA, Mandiri, BNI, dll)</option>
+              <option value="tarik_tunai">Tarik Tunai Kartu ATM (Semua Bank)</option>
+              <option value="setor_tunai">Setor Tunai Tabungan</option>
+              <option value="pln_token">Beli Token Listrik PLN</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Nominal Transaksi (Rp)</label>
+            <input type="text" class="input-control" id="calc-amount" placeholder="Contoh: 500.000" value="500.000" oninput="formatAndCalculate(this)">
+          </div>
+
+          <div class="calc-result-box">
+            <div>
+              <div class="label">Estimasi Biaya Admin</div>
+              <div style="font-size: 11px; color: var(--gray-600); margin-top: 2px;">Cepat & Transparan</div>
+            </div>
+            <div class="value" id="calc-admin-fee">Rp 5.000</div>
+          </div>
+
+          <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20saya%20mau%20transaksi%20BRILink" target="_blank" class="btn btn-primary" style="width: 100%; padding: 13px;">
+            Hubungi Kasir via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Core Pillars Section -->
+  <section class="section" id="layanan">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Solusi Satu Pintu</span>
+        <h2 class="section-title">2 Layanan Utama di ANURA MART</h2>
+        <p class="section-subtitle">Kami memadukan kenyamanan belanja minimarket harian dengan kemudahan transaksi finansial digital perbankan bagi warga sekitar.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Retail Pillar -->
+        <div class="service-main-card retail">
+          <div>
+            <div class="card-icon retail">🛒</div>
+            <h3>Retail & Minimarket Mandiri</h3>
+            <p class="desc">Menyediakan seluruh kebutuhan rumah tangga dengan harga bersaing, tempat bersih, ber-AC, dan barang tertata rapi.</p>
+            <ul class="feature-list">
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--primary);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Sembako Lengkap:</strong> Beras premium, minyak goreng, gula, tepung, telur segar.
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--primary);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Minuman Dingin & Snack:</strong> Aneka softdrink, es krim, susu, biskuit, dan roti.
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--primary);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Kebutuhan Rumah Tangga:</strong> Sabun mandi, deterjen, sampo, popok bayi, pasta gigi.
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--primary);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Gas Elpiji & Air Mineral Galon:</strong> Siap antar langsung sampai pintu rumah Anda.
+              </li>
+            </ul>
+          </div>
+          <a href="#katalog" class="btn btn-outline">
+            Lihat Produk & Promo Mingguan →
+          </a>
+        </div>
+
+        <!-- Fintech Pillar -->
+        <div class="service-main-card fintech" id="brilink">
+          <div>
+            <div class="card-icon fintech">⚡</div>
+            <h3>Agen BRILink & Layanan Digital</h3>
+            <p class="desc">Pusat transaksi keuangan serba praktis. Tidak perlu antre lama di bank atau cari mesin ATM jauh-jauh.</p>
+            <ul class="feature-list">
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Tarik & Setor Tunai:</strong> Menggunakan kartu ATM debit semua bank atau tanpa kartu.
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Transfer Antar Bank:</strong> Kirim uang ke rekening BRI, BCA, BNI, Mandiri, BSI dalam detik.
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Top Up E-Wallet:</strong> DANA, OVO, GoPay, ShopeePay, LinkAja, Maxim Driver.
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color: var(--accent);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Bayar Tagihan PPOB:</strong> Listrik PLN (Token/Bulanan), PDAM, BPJS, WiFi, Cicilan Kredit.
+              </li>
+            </ul>
+          </div>
+          <a href="#simulasi" class="btn btn-primary" style="background: var(--accent);">
+            Hitung Biaya Admin Transaksi →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Catalog Section -->
+  <section class="catalog-section" id="katalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Spesial Pekan Ini</span>
+        <h2 class="section-title">Katalog Produk & Harga Hemat</h2>
+        <p class="section-subtitle">Dapatkan harga promo terbaik langsung di gerai ANURA MART atau pesan antar langsung via WhatsApp.</p>
+      </div>
+
+      <div class="catalog-tabs">
+        <button class="tab-pill active" onclick="filterCatalog('all', this)">Semua Produk</button>
+        <button class="tab-pill" onclick="filterCatalog('sembako', this)">🌾 Sembako & Dapur</button>
+        <button class="tab-pill" onclick="filterCatalog('minuman', this)">🥤 Minuman & Dingin</button>
+        <button class="tab-pill" onclick="filterCatalog('snack', this)">🍪 Snack & Makanan Ringan</button>
+        <button class="tab-pill" onclick="filterCatalog('rumah', this)">🧼 Kebersihan & Rumah</button>
+      </div>
+
+      <div class="product-grid" id="product-container">
+        <!-- Item 1 -->
+        <div class="product-card" data-category="sembako">
+          <div class="product-thumb">
+            🍚
+            <span class="discount-badge">HEMAT</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Sembako</span>
+            <h4 class="product-name">Beras Premium Ramos 5 Kg</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 76.000</span><br>
+                <span class="real-price">Rp 71.500</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Beras%20Ramos%205kg" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="product-card" data-category="sembako">
+          <div class="product-thumb">
+            🍳
+            <span class="discount-badge">-10%</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Sembako</span>
+            <h4 class="product-name">Minyak Goreng Pouch 2 Liter</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 37.000</span><br>
+                <span class="real-price">Rp 33.900</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Minyak%20Goreng%202L" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="product-card" data-category="minuman">
+          <div class="product-thumb">
+            ☕
+            <span class="discount-badge">BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Minuman</span>
+            <h4 class="product-name">Kopi Susu Botol Dingin 250ml</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 10.000</span><br>
+                <span class="real-price">Rp 8.500</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Kopi%20Susu%20Dingin" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="product-card" data-category="minuman">
+          <div class="product-thumb">
+            🧃
+            <span class="discount-badge">SEGAR</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Minuman</span>
+            <h4 class="product-name">Susu UHT Full Cream 1 Liter</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 21.000</span><br>
+                <span class="real-price">Rp 18.500</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Susu%20UHT%201L" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="product-card" data-category="snack">
+          <div class="product-thumb">
+            🥔
+            <span class="discount-badge">PROMO</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Makanan Ringan</span>
+            <h4 class="product-name">Keripik Kentang Gurih 68g</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 12.000</span><br>
+                <span class="real-price">Rp 9.900</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Keripik%20Kentang" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="product-card" data-category="snack">
+          <div class="product-thumb">
+            🍞
+            <span class="discount-badge">FRESH</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Makanan Ringan</span>
+            <h4 class="product-name">Roti Tawar Gandum Lembut</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 16.500</span><br>
+                <span class="real-price">Rp 14.500</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Roti%20Tawar" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="product-card" data-category="rumah">
+          <div class="product-thumb">
+            🧴
+            <span class="discount-badge">PAKET IRIT</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Kebersihan</span>
+            <h4 class="product-name">Deterjen Cair Konsentrat 750ml</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 22.000</span><br>
+                <span class="real-price">Rp 17.800</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Deterjen%20Cair" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="product-card" data-category="rumah">
+          <div class="product-thumb">
+            🧼
+            <span class="discount-badge">-15%</span>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Kebersihan</span>
+            <h4 class="product-name">Sabun Mandi Cair Refill 450ml</h4>
+            <div class="price-group">
+              <div>
+                <span class="strike-price">Rp 26.000</span><br>
+                <span class="real-price">Rp 21.900</span>
+              </div>
+              <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20pesan%20Sabun%20Mandi" target="_blank" class="btn btn-outline" style="padding: 6px 14px; font-size: 12px;">Beli</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Anura Mart -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kenapa Warga Memilih Kami?</span>
+        <h2 class="section-title">Keunggulan Belanja di ANURA MART</h2>
+        <p class="section-subtitle">Kenyamanan belanja retail modern dan transaksi keuangan cepat dalam satu lokasi strategis.</p>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="why-card">
+          <div class="icon-box">⚡</div>
+          <h4>Transaksi Secepat Kilat</h4>
+          <p>Tarik tunai, transfer, dan pembayaran tagihan selesai dalam hitungan detik didukung mesin EDC resmi & sistem perbankan stabil.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">❄️</div>
+          <h4>Toko Nyaman & Bersih</h4>
+          <p>Ruangan dingin ber-AC, lorong luas, penataan rapi, serta staf ramah yang siap membantu mencari barang kebutuhan Anda.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">🏷️</div>
+          <h4>Harga Jujur & Bersaing</h4>
+          <p>Harga barang jelas tertera di label rak, rutin ada promo potongan harga mingguan untuk meringankan belanja keluarga.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">💳</div>
+          <h4>Semua Metode Pembayaran</h4>
+          <p>Menerima uang tunai, QRIS semua aplikasi perbankan & e-wallet, serta kartu debit tanpa biaya tambahan yang membingungkan.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">🛵</div>
+          <h4>Layanan Antar ke Rumah</h4>
+          <p>Cukup kirim pesan WhatsApp, barang belanjaan atau galon dan gas elpiji langsung diantar ke depan pintu rumah Anda.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon-box">🅿️</div>
+          <h4>Parkir Luas & Gratis</h4>
+          <p>Akses kendaraan motor maupun mobil sangat mudah, aman, bebas biaya parkir liar untuk seluruh pelanggan setia.</p>
+        </div>
+      </div>
+
+      <!-- WhatsApp Delivery CTA Banner -->
+      <div class="delivery-banner">
+        <div>
+          <h3>Mager Keluar Rumah? Kami Antar! 🛵💨</h3>
+          <p>Butuh galon air, gas elpiji 3kg, beras, atau cemilan malam hari? Tinggal chat daftar belanjaan Anda via WhatsApp, kurir kami antar langsung (khusus warga sekitar radius toko).</p>
+          <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20saya%20mau%20pesan%20antar%20ke%20rumah" target="_blank" class="btn btn-primary" style="background: var(--white); color: var(--primary); padding: 13px 28px; font-weight: 700;">
+            Pesan Antar Sekarang via WhatsApp
+          </a>
+        </div>
+        <div class="delivery-card-cta">
+          <h5>🕒 Jam Layanan Delivery</h5>
+          <p>Setiap Hari: 07.00 - 21.00 WIB<br>Pembayaran bisa Tunai di Tempat (COD) atau scan QRIS.</p>
+          <div style="font-size: 12px; color: var(--primary); font-weight: 700;">GRATIS ONGKIR AREA SEKITAR*</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Hours Section -->
+  <section class="section" id="lokasi" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kunjungi Gerai Kami</span>
+        <h2 class="section-title">Lokasi & Jam Operasional</h2>
+        <p class="section-subtitle">Temukan gerai ANURA MART dengan mudah di pusat pemukiman warga.</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h5>Alamat Toko</h5>
+              <p>Jl. Raya Pemukiman No. 88 (Dekat Perumahan Warga), Indonesia</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">⏰</div>
+            <div class="info-content">
+              <h5>Jam Operasional Toko</h5>
+              <p><strong>Buka Setiap Hari:</strong> 06.00 – 22.00 WIB (Termasuk Hari Libur / Tanggal Merah)</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">⚡</div>
+            <div class="info-content">
+              <h5>Layanan Agen BRILink</h5>
+              <p>Setiap Hari: 06.30 – 21.30 WIB (Tarik/Setor Tunai & Transfer)</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-content">
+              <h5>Kontak & Layanan Pelanggan</h5>
+              <p>WhatsApp: <strong>0812-3456-7890</strong><br>Email: admin@anuramart.id</p>
+            </div>
+          </div>
+          <div style="margin-top: 10px;">
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline">
+              Buka Navigasi Google Maps ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="map-preview-box">
+          <div style="font-size: 40px; margin-bottom: 12px;">🗺️</div>
+          <h4 style="font-size: 18px; font-weight: 800; color: var(--dark); margin-bottom: 6px;">Peta Lokasi ANURA MART</h4>
+          <p style="font-size: 14px; color: var(--gray-600); max-width: 320px; margin-bottom: 20px;">
+            Akses jalan lebar, parkir gratis luas tepat di depan toko, ramah pengendara motor & mobil.
+          </p>
+          <a href="https://maps.google.com" target="_blank" class="btn btn-primary" style="font-size: 13px;">
+            Petunjuk Arah ke Toko
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>🏪 ANURA MART</h4>
+          <p>Toko retail minimarket mandiri terpercaya yang mengedepankan kelengkapan sembako keluarga serta layanan transaksi perbankan & digital Agen BRILink cepat tanpa antre.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Layanan Toko</h5>
+          <ul>
+            <li><a href="#layanan">Sembako & Kebutuhan Harian</a></li>
+            <li><a href="#layanan">Minuman Dingin & Snack</a></li>
+            <li><a href="#katalog">Katalog Promo Pekan Ini</a></li>
+            <li><a href="#layanan">Pesan Antar ke Rumah</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Layanan BRILink & Digital</h5>
+          <ul>
+            <li><a href="#brilink">Tarik & Setor Tunai</a></li>
+            <li><a href="#brilink">Transfer Antar Bank</a></li>
+            <li><a href="#brilink">Top Up DANA, OVO, GoPay</a></li>
+            <li><a href="#brilink">Bayar Listrik PLN & Tagihan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 ANURA MART. Seluruh Hak Cipta Dilindungi.</div>
+        <div>Melayani dengan Sepenuh Hati untuk Warga Sekitar.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom Bar -->
+  <div class="mobile-bar">
+    <a href="https://wa.me/6281234567890?text=Halo%20Anura%20Mart,%20saya%20mau%20pesan%20belanjaan" target="_blank" class="btn btn-primary" style="flex: 1;">
+      💬 Chat Kasir
+    </a>
+    <a href="#lokasi" class="btn btn-outline" style="flex: 1;">
+      📍 Lokasi Toko
+    </a>
+  </div>
+
+  <script>
+    // Tab and Calculator Logic
+    let currentTab = 'brilink';
+
+    function switchCalc(type) {
+      currentTab = type;
+      const btnBrilink = document.getElementById('tab-btn-brilink');
+      const btnTopup = document.getElementById('tab-btn-topup');
+      const selectService = document.getElementById('calc-service');
+      const label = document.getElementById('calc-select-label');
+
+      if (type === 'brilink') {
+        btnBrilink.classList.add('active');
+        btnTopup.classList.remove('active');
+        label.innerText = 'Layanan BRILink';
+        selectService.innerHTML = `
+          <option value="transfer_bri">Transfer Sesama Bank BRI</option>
+          <option value="transfer_lain">Transfer ke Bank Lain (BCA, Mandiri, BNI, dll)</option>
+          <option value="tarik_tunai">Tarik Tunai Kartu ATM (Semua Bank)</option>
+          <option value="setor_tunai">Setor Tunai Tabungan</option>
+          <option value="pln_token">Beli Token Listrik PLN</option>
+        `;
+      } else {
+        btnTopup.classList.add('active');
+        btnBrilink.classList.remove('active');
+        label.innerText = 'Pilihan E-Wallet & Digital';
+        selectService.innerHTML = `
+          <option value="dana">Top Up DANA</option>
+          <option value="gopay">Top Up GoPay</option>
+          <option value="ovo">Top Up OVO</option>
+          <option value="shopeepay">Top Up ShopeePay</option>
+          <option value="maxim">Isi Saldo Driver Maxim</option>
+          <option value="pulsa">Pulsa & Kuota Internet</option>
+        `;
+      }
+      calculateFee();
+    }
+
+    function formatNumber(n) {
+      return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    function parseFormattedNumber(str) {
+      return parseFloat(str.replace(/\./g, '')) || 0;
+    }
+
+    function formatAndCalculate(input) {
+      let raw = input.value.replace(/\D/g, '');
+      if (raw) {
+        input.value = formatNumber(parseInt(raw, 10));
+      } else {
+        input.value = '';
+      }
+      calculateFee();
+    }
+
+    function calculateFee() {
+      const service = document.getElementById('calc-service').value;
+      const amountInput = document.getElementById('calc-amount').value;
+      const amount = parseFormattedNumber(amountInput);
+      const feeEl = document.getElementById('calc-admin-fee');
+
+      let fee = 5000;
+      if (currentTab === 'brilink') {
+        if (service === 'transfer_bri') {
+          fee = amount > 1000000 ? 5000 : 3000;
+        } else if (service === 'transfer_lain') {
+          fee = amount > 1000000 ? 7000 : 5000;
+        } else if (service === 'tarik_tunai') {
+          fee = amount > 1000000 ? 7000 : 5000;
+        } else if (service === 'setor_tunai') {
+          fee = 5000;
+        } else if (service === 'pln_token') {
+          fee = 3000;
+        }
+      } else {
+        // E-Wallet fees
+        if (service === 'pulsa') {
+          fee = 2000;
+        } else {
+          fee = amount > 500000 ? 3000 : 2000;
+        }
+      }
+
+      feeEl.innerText = 'Rp ' + fee.toLocaleString('id-ID');
+    }
+
+    // Catalog Filtering Logic
+    function filterCatalog(category, btn) {
+      document.querySelectorAll('.tab-pill').forEach(el => el.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Initial calc
+    calculateFee();
+  </script>
+</body>
+</html>
